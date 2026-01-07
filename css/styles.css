@@ -41,7 +41,7 @@ body {
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 1001;
+    z-index: 10000;
     display: flex;
     gap: 10px;
     background: var(--bg-color);
@@ -77,10 +77,10 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    z-index: 9999;
     padding: 1rem 0;
 }
 
@@ -145,16 +145,50 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(55, 65, 81, 0.9) 100%),
+                url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070') center/cover no-repeat;
+    background-attachment: fixed;
     color: white;
-    padding: 6rem 0;
-    margin-top: 60px;
+    padding: 8rem 0 6rem;
+    margin-top: 70px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(16, 185, 129, 0.15) 0%, transparent 50%);
+    animation: gradientShift 15s ease infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-20px) scale(1.1);
+        opacity: 0.8;
+    }
 }
 
 .hero-content {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
+    position: relative;
+    z-index: 10;
 }
 
 .hero-title {
@@ -249,7 +283,10 @@ body {
 
 /* Section Styles */
 section {
-    padding: 5rem 0;
+    padding: 6rem 0;
+    scroll-margin-top: 100px;
+    position: relative;
+    z-index: 100;
 }
 
 .section-title {
@@ -273,50 +310,165 @@ section {
 /* About Section */
 .about {
     background: var(--bg-secondary);
+    position: relative;
+    z-index: 100;
 }
 
 .about-content {
     display: grid;
-    gap: 3rem;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.about-image {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+    position: relative;
+    z-index: 2;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.image-overlay {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.overlay-icon {
+    font-size: 2.5rem;
+    color: white;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .about-text p {
     font-size: 1.1rem;
     color: var(--text-light);
-    margin-bottom: 1.5rem;
     line-height: 1.8;
+    margin: 0;
+}
+
+.about-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem 1.2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+}
+
+.highlight-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.highlight-item i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.highlight-item span {
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 0.95rem;
 }
 
 .about-stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
 }
 
 .stat-card {
     background: white;
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 15px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
+    border-top: 4px solid var(--primary-color);
 }
 
 .stat-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-icon i {
+    font-size: 1.8rem;
+    color: white;
 }
 
 .stat-card h3 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--primary-color);
     margin-bottom: 0.5rem;
+    font-weight: 700;
 }
 
 .stat-card p {
     color: var(--text-light);
     font-weight: 600;
+    font-size: 0.95rem;
 }
 
 /* Skills Section */
@@ -579,6 +731,25 @@ section {
 }
 
 /* Responsive Design */
+@media (max-width: 968px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-image {
+        max-width: 280px;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -622,6 +793,21 @@ section {
         font-size: 2rem;
     }
 
+    .about-image {
+        max-width: 250px;
+    }
+
+    .image-overlay {
+        width: 80px;
+        height: 80px;
+        top: -15px;
+        right: -15px;
+    }
+
+    .overlay-icon {
+        font-size: 2rem;
+    }
+
     .timeline::before {
         left: 0;
     }
@@ -659,6 +845,15 @@ section {
 
     .about-stats {
         grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        max-width: 220px;
+    }
+
+    .highlight-item {
+        flex-direction: column;
+        text-align: center;
     }
 
     .contact-info {
