@@ -860,3 +860,12 @@ section {
         grid-template-columns: 1fr;
     }
 }
+
+/* Featured project with video (Nov 2026) */
+.project-card.featured { grid-column: 1 / -1; }
+.project-media { margin: -2rem -2rem 1.5rem; border-radius: 12px 12px 0 0; overflow: hidden; background: #000; }
+.project-media video { display: block; width: 100%; max-height: 520px; object-fit: contain; }
+.project-link { display: inline-flex; align-items: center; gap: .4rem; margin-top: 1rem; color: var(--primary-color); font-weight: 600; text-decoration: none; }
+.project-link:hover { text-decoration: underline; }
+.skill-category h3 i { color: var(--primary-color); margin-right: .3rem; }
+@media (max-width: 768px) { .project-media { margin: -1.5rem -1.5rem 1rem; } }
