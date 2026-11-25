@@ -49,3 +49,7 @@ tmp/
 # Personal notes
 notes.txt
 TODO.md
+
+# design-process files (not published)
+.impeccable/
+PRODUCT.md

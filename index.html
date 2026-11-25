@@ -1,351 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Abhishek Jha - Autonomous Systems & Embedded Software Engineer: ROS 2, perception on NVIDIA Jetson, vehicle E/E bring-up, HIL and CI/CD, agentic automation">
-    <meta name="keywords" content="ROS 2, autonomous vehicles, computer vision, NVIDIA Jetson, TensorRT, CAN, XCP, CANoe, ISO 26262, HIL, CI/CD, Claude Code, MCP">
-    <meta name="author" content="Abhishek Jha">
-    <title>Abhishek Jha | Autonomous Systems Engineer</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abhishek Jha · Autonomous Systems Engineer</title>
+<meta name="description" content="Abhishek Jha, autonomous systems engineer in Aachen: perception and edge AI on NVIDIA Jetson, vehicle bring-up, UAV autonomy, HIL and CI testing.">
+<meta name="theme-color" content="#101214">
+<link rel="preload" href="assets/fonts/big-shoulders-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-    <!-- Language Switcher -->
-    <div class="language-switcher">
-        <button onclick="switchLanguage('en')" class="lang-btn active" id="lang-en">EN</button>
-        <button onclick="switchLanguage('de')" class="lang-btn" id="lang-de">DE</button>
+<a class="skip" href="#work" data-en="Skip to work" data-de="Zu den Projekten">Skip to work</a>
+<header class="bar">
+  <a class="bar__name" href="#top">Abhishek Jha</a>
+  <nav aria-label="Main">
+    <a href="#work" data-en="Work" data-de="Projekte">Work</a>
+    <a href="#career" data-en="Career" data-de="Werdegang">Career</a>
+    <a href="#contact" data-en="Contact" data-de="Kontakt">Contact</a>
+  </nav>
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" data-lang="en" aria-pressed="true">EN</button>
+    <button type="button" data-lang="de" aria-pressed="false">DE</button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="assets/videos/thesis_line_detection.jpg" aria-hidden="true">
+      <source src="assets/videos/thesis_line_detection.mp4" type="video/mp4">
+    </video>
+    <div class="hero__shade" aria-hidden="true"></div>
+    <div class="hero__body">
+      <h1 id="hero-title"><span data-en="Autonomy," data-de="Autonomie,">Autonomy,</span> <span data-en="from model to vehicle." data-de="vom Modell bis ins Fahrzeug.">from model to vehicle.</span></h1>
+      <p class="hero__lead" data-en="I&#x27;m Abhishek Jha, an autonomous systems engineer in Aachen. I make perception run in real time on embedded computers, bring prototype vehicles up, and build the tests that keep them working." data-de="Ich bin Abhishek Jha, Ingenieur für autonome Systeme in Aachen. Ich bringe Wahrnehmung in Echtzeit auf Embedded-Rechner, nehme Prototyp-Fahrzeuge in Betrieb und baue die Tests, die sie funktionsfähig halten.">I&#x27;m Abhishek Jha, an autonomous systems engineer in Aachen. I make perception run in real time on embedded computers, bring prototype vehicles up, and build the tests that keep them working.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#work" data-en="See the work" data-de="Zu den Projekten">See the work</a>
+        <a class="btn btn--ghost" href="mailto:abjha1998@gmail.com">abjha1998@gmail.com</a>
+      </div>
     </div>
+    <dl class="datum">
+      <div><dt data-en="Degree" data-de="Abschluss">Degree</dt><dd data-en="M.Sc. Automation Eng., RWTH" data-de="M.Sc. Automatisierungstechnik, RWTH">M.Sc. Automation Eng., RWTH</dd></div>
+      <div><dt data-en="Thesis" data-de="Masterarbeit">Thesis</dt><dd>1.0</dd></div>
+      <div><dt data-en="Start" data-de="Start">Start</dt><dd data-en="immediately" data-de="sofort">immediately</dd></div>
+      <div><dt data-en="Base" data-de="Ort">Base</dt><dd data-en="Aachen · will relocate" data-de="Aachen · umzugsbereit">Aachen · will relocate</dd></div>
+      <div><dt data-en="Languages" data-de="Sprachen">Languages</dt><dd data-en="English · German C1" data-de="Englisch · Deutsch C1">English · German C1</dd></div>
+    </dl>
+  </section>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">Abhishek Jha</div>
-            <ul class="nav-menu">
-                <li><a href="#home" data-en="Home" data-de="Startseite">Home</a></li>
-                <li><a href="#about" data-en="About" data-de="Über mich">About</a></li>
-                <li><a href="#skills" data-en="Skills" data-de="Fähigkeiten">Skills</a></li>
-                <li><a href="#projects" data-en="Projects" data-de="Projekte">Projects</a></li>
-                <li><a href="#experience" data-en="Experience" data-de="Erfahrung">Experience</a></li>
-                <li><a href="#contact" data-en="Contact" data-de="Kontakt">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+  <section class="works" id="work" aria-labelledby="work-title">
+    <h2 class="section-title" id="work-title" data-en="Selected work" data-de="Ausgewählte Projekte">Selected work</h2>
+    
+      <article class="work" id="thesis">
+        <div class="work__text">
+          <h3 class="work__title" data-en="Real-time line detection with transformers" data-de="Echtzeit-Linienerkennung mit Transformern">Real-time line detection with transformers</h3>
+          <ul class="spec"><li>Master thesis · grade 1.0</li><li>Jetson AGX Orin</li><li>NanoSAM · GPU-RANSAC · Kalman</li><li>real time</li></ul>
+          <p class="work__lead" data-en="Line detection for an automated guided vehicle: I compared classical methods, CNNs and transformers, changed the model architecture for the task and made the whole pipeline fast enough to run in real time on the vehicle&#x27;s embedded computer." data-de="Linienerkennung für ein fahrerloses Transportfahrzeug: Ich habe klassische Verfahren, CNNs und Transformer verglichen, die Modellarchitektur für die Aufgabe angepasst und die gesamte Pipeline schnell genug für Echtzeit auf dem Embedded-Rechner des Fahrzeugs gemacht.">Line detection for an automated guided vehicle: I compared classical methods, CNNs and transformers, changed the model architecture for the task and made the whole pipeline fast enough to run in real time on the vehicle&#x27;s embedded computer.</p>
+          <details class="work__more">
+            <summary><span data-en="Case details" data-de="Details zum Projekt">Case details</span></summary>
+            <p data-en="The training data combined CARLA simulation across many maps, weather and lighting scenarios with public lane data and real vehicle images, which I labelled automatically with a segmentation model. Models were trained on an HPC cluster. The video shows the model on real recordings with the live IoU score." data-de="Die Trainingsdaten kombinierten CARLA-Simulation über viele Karten, Wetter- und Lichtszenarien mit öffentlichen Spurdaten und realen Fahrzeugbildern, die ich automatisch mit einem Segmentierungsmodell gelabelt habe. Trainiert wurde auf einem HPC-Cluster. Das Video zeigt das Modell auf realen Aufnahmen mit dem laufenden IoU-Wert.">The training data combined CARLA simulation across many maps, weather and lighting scenarios with public lane data and real vehicle images, which I labelled automatically with a segmentation model. Models were trained on an HPC cluster. The video shows the model on real recordings with the live IoU score.</p>
+            <dl class="facts"><div><dt data-en="Hardware" data-de="Hardware">Hardware</dt><dd data-en="NVIDIA Jetson AGX Orin" data-de="NVIDIA Jetson AGX Orin">NVIDIA Jetson AGX Orin</dd></div><div><dt data-en="Stack" data-de="Stack">Stack</dt><dd data-en="PyTorch, TensorRT (INT8 encoder, FP16 decoder), CUDA, CARLA" data-de="PyTorch, TensorRT (INT8-Encoder, FP16-Decoder), CUDA, CARLA">PyTorch, TensorRT (INT8 encoder, FP16 decoder), CUDA, CARLA</dd></div><div><dt data-en="Result" data-de="Ergebnis">Result</dt><dd data-en="Inference sped up by roughly an order of magnitude, full pipeline within the camera&#x27;s frame budget" data-de="Inferenz rund um eine Größenordnung beschleunigt, gesamte Pipeline im Frame-Budget der Kamera">Inference sped up by roughly an order of magnitude, full pipeline within the camera&#x27;s frame budget</dd></div><div><dt data-en="Where" data-de="Wo">Where</dt><dd data-en="PEM, RWTH Aachen, 10/2025 – 05/2026" data-de="PEM, RWTH Aachen, 10/2025 – 05/2026">PEM, RWTH Aachen, 10/2025 – 05/2026</dd></div></dl>
+            
+          </details>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Abhishek Jha</h1>
-                <h2 class="hero-subtitle" data-en="Autonomous Systems &amp; Embedded Software Engineer" data-de="Ingenieur für autonome Systeme &amp; Embedded Software">Autonomous Systems &amp; Embedded Software Engineer</h2>
-                <p class="hero-description" data-en="M.Sc. Automation Engineering (RWTH Aachen, thesis grade 1.0). I bring autonomous vehicles up, make their perception run in real time on embedded computers, and automate the tests and tooling around them." data-de="M.Sc. Automatisierungstechnik (RWTH Aachen, Masterarbeit 1,0). Ich nehme autonome Fahrzeuge in Betrieb, bringe ihre Wahrnehmung in Echtzeit auf Embedded-Rechner und automatisiere Tests und Werkzeuge rund um die Fahrzeugsoftware.">M.Sc. Automation Engineering (RWTH Aachen, thesis grade 1.0). I bring autonomous vehicles up, make their perception run in real time on embedded computers, and automate the tests and tooling around them.</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary" data-en="View Projects" data-de="Projekte ansehen">View Projects</a>
-                    <a href="#contact" class="btn btn-secondary" data-en="Get in Touch" data-de="Kontakt aufnehmen">Get in Touch</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/abhishek-j-3497a8121" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/Abhi-Jha345" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="mailto:abjha1998@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
+        <figure class="media"><video muted loop playsinline preload="none" poster="assets/videos/thesis_line_detection.jpg" aria-label="Line detection model running on real AGV recordings"><source src="assets/videos/thesis_line_detection.mp4" type="video/mp4"></video><button class="vtoggle" type="button" aria-label="Play video" data-state="paused"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-play" d="M8 5v14l11-7z"/><path class="i-pause" d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button></figure>
+      </article>
+      <article class="work" id="uav">
+        <div class="work__text">
+          <h3 class="work__title" data-en="Fixed-wing UAV autopilot" data-de="Starrflügler-UAV-Autopilot">Fixed-wing UAV autopilot</h3>
+          <ul class="spec"><li>Personal project</li><li>C++17</li><li>Simulink 6-DOF</li><li>H∞ + TECS</li><li>JSBSim SIL</li><li>STM32 Cortex-M4F</li></ul>
+          <p class="work__lead" data-en="A safety-critical autopilot built in a lightweight DO-178C style: requirements, hazard assessment and a code-to-test trace matrix are checked in CI, and the C++ core is verified back-to-back against a Simulink reference." data-de="Ein sicherheitskritischer Autopilot im Stil eines schlanken DO-178C-Prozesses: Anforderungen, Gefährdungsanalyse und eine Trace-Matrix von Code zu Tests werden in der CI geprüft, und der C++-Kern wird Back-to-Back gegen eine Simulink-Referenz verifiziert.">A safety-critical autopilot built in a lightweight DO-178C style: requirements, hazard assessment and a code-to-test trace matrix are checked in CI, and the C++ core is verified back-to-back against a Simulink reference.</p>
+          <details class="work__more">
+            <summary><span data-en="Case details" data-de="Details zum Projekt">Case details</span></summary>
+            <p data-en="I designed gain-scheduled structured H-infinity attitude and rate control with anti-windup and a TECS energy controller, and tested them in standard flight-test cycles and a sim-to-real Monte Carlo campaign with airframe uncertainty, servo limits, sensor noise, wind and turbulence. The core runs software-in-the-loop against JSBSim and cross-compiles for an STM32. A ROS 2 companion with Gazebo and OpenVINS for GNSS-denied navigation is in progress. Built with Claude Code sub-agents in parallel worktrees and an MCP server for MATLAB." data-de="Ich habe eine gain-geplante strukturierte H-unendlich-Lage- und Ratenregelung mit Anti-Windup sowie einen TECS-Energieregler entworfen und in Standard-Flugtestzyklen und einer Sim-to-Real-Monte-Carlo-Kampagne mit Zellenunsicherheit, Servogrenzen, Sensorrauschen, Wind und Turbulenz getestet. Der Kern läuft Software-in-the-Loop gegen JSBSim und lässt sich für einen STM32 cross-kompilieren. Ein ROS-2-Companion mit Gazebo und OpenVINS für GNSS-freie Navigation ist in Arbeit. Entwickelt mit Claude-Code-Sub-Agents in parallelen Worktrees und einem MCP-Server für MATLAB.">I designed gain-scheduled structured H-infinity attitude and rate control with anti-windup and a TECS energy controller, and tested them in standard flight-test cycles and a sim-to-real Monte Carlo campaign with airframe uncertainty, servo limits, sensor noise, wind and turbulence. The core runs software-in-the-loop against JSBSim and cross-compiles for an STM32. A ROS 2 companion with Gazebo and OpenVINS for GNSS-denied navigation is in progress. Built with Claude Code sub-agents in parallel worktrees and an MCP server for MATLAB.</p>
+            <dl class="facts"><div><dt data-en="Loops" data-de="Regelkreise">Loops</dt><dd data-en="10 / 50 / 200 Hz rate groups on a 5 ms base frame" data-de="Ratengruppen mit 10 / 50 / 200 Hz auf 5-ms-Grundtakt">10 / 50 / 200 Hz rate groups on a 5 ms base frame</dd></div><div><dt data-en="Modes" data-de="Modi">Modes</dt><dd data-en="MANUAL, STABILIZE, ALT_HOLD, WAYPOINT, LOITER, RTL with failsafes" data-de="MANUAL, STABILIZE, ALT_HOLD, WAYPOINT, LOITER, RTL mit Failsafes">MANUAL, STABILIZE, ALT_HOLD, WAYPOINT, LOITER, RTL with failsafes</dd></div><div><dt data-en="Verification" data-de="Verifikation">Verification</dt><dd data-en="GoogleTest, back-to-back vs Simulink, trace matrix, clang-tidy, sanitizers" data-de="GoogleTest, Back-to-Back gegen Simulink, Trace-Matrix, clang-tidy, Sanitizer">GoogleTest, back-to-back vs Simulink, trace matrix, clang-tidy, sanitizers</dd></div><div><dt data-en="Status" data-de="Status">Status</dt><dd data-en="Requirement limits still draft; HIL and GNSS-denied fusion in progress" data-de="Anforderungsgrenzen noch Entwurf; HIL und GNSS-freie Fusion in Arbeit">Requirement limits still draft; HIL and GNSS-denied fusion in progress</dd></div></dl>
+            <p class="more-media"><a class="textlink" href="assets/uav/sim2real_campaign.png" target="_blank" rel="noopener" data-en="Monte Carlo campaign plot ↗" data-de="Plot der Monte-Carlo-Kampagne ↗">Monte Carlo campaign plot ↗</a></p>
+          </details>
         </div>
-    </section>
-
-    <!-- About Section -->
-
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title" data-en="About Me" data-de="Über mich">About Me</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="images/profile.jpg" alt="Abhishek Jha">
-                    <div class="image-overlay"><div class="overlay-icon"><i class="fas fa-robot"></i></div></div>
-                </div>
-                <div class="about-text">
-                    <p data-en="I am an engineer for autonomous vehicles and embedded software. At PEM (RWTH Aachen) I worked on an autonomous electric bus and a fuel-cell hybrid truck: recommissioning the bus from its wiring diagrams, integrating its perception and control stack in ROS 2 on an NVIDIA Jetson, and building the CI/CD and hardware-in-the-loop tests that kept it deployable." data-de="Ich bin Ingenieur für autonome Fahrzeuge und Embedded Software. Am PEM (RWTH Aachen) habe ich an einem autonomen Elektrobus und einem Brennstoffzellen-Hybrid-Lkw gearbeitet: den Bus anhand seiner Schaltpläne wieder in Betrieb genommen, den Wahrnehmungs- und Regelungsstack in ROS 2 auf einem NVIDIA Jetson integriert und die CI/CD- und Hardware-in-the-Loop-Tests aufgebaut, die ihn auslieferbar hielten.">I am an engineer for autonomous vehicles and embedded software. At PEM (RWTH Aachen) I worked on an autonomous electric bus and a fuel-cell hybrid truck: recommissioning the bus from its wiring diagrams, integrating its perception and control stack in ROS 2 on an NVIDIA Jetson, and building the CI/CD and hardware-in-the-loop tests that kept it deployable.</p>
-                    <p data-en="My master thesis (grade 1.0) brought a transformer-based line detection pipeline to real time on a Jetson AGX Orin. I work with agentic coding workflows (Claude Code, sub-agents, MCP servers) to turn manual engineering steps into scripts, and I hold an HV qualification at level 3E." data-de="Meine Masterarbeit (Note 1,0) hat eine transformerbasierte Linienerkennung in Echtzeit auf einen Jetson AGX Orin gebracht. Ich arbeite mit agentischen Coding-Workflows (Claude Code, Sub-Agents, MCP-Server), um manuelle Entwicklungsschritte in Skripte zu verwandeln, und besitze eine HV-Qualifikation der Stufe 3E.">My master thesis (grade 1.0) brought a transformer-based line detection pipeline to real time on a Jetson AGX Orin. I work with agentic coding workflows (Claude Code, sub-agents, MCP servers) to turn manual engineering steps into scripts, and I hold an HV qualification at level 3E.</p>
-                    <div class="about-highlights">
-                        <div class="highlight-item"><i class="fas fa-eye"></i><span data-en="Perception &amp; Edge AI" data-de="Wahrnehmung &amp; Edge AI">Perception &amp; Edge AI</span></div>
-                        <div class="highlight-item"><i class="fas fa-bus"></i><span data-en="Vehicle Bring-up &amp; E/E" data-de="Fahrzeug-Inbetriebnahme &amp; E/E">Vehicle Bring-up &amp; E/E</span></div>
-                        <div class="highlight-item"><i class="fas fa-vial"></i><span data-en="HIL, CI/CD &amp; ISO 26262 Tests" data-de="HIL, CI/CD &amp; ISO-26262-Tests">HIL, CI/CD &amp; ISO 26262 Tests</span></div>
-                        <div class="highlight-item"><i class="fas fa-robot"></i><span data-en="Agentic Automation" data-de="Agentische Automatisierung">Agentic Automation</span></div>
-                    </div>
-                </div>
-            </div>
-            <div class="about-stats">
-                <div class="stat-card"><div class="stat-icon"><i class="fas fa-graduation-cap"></i></div><h3>1.0</h3><p data-en="Master thesis grade" data-de="Note Masterarbeit">Master thesis grade</p></div>
-                <div class="stat-card"><div class="stat-icon"><i class="fas fa-tools"></i></div><h3>2 months</h3><p data-en="Bus back on the road" data-de="Bus wieder fahrbereit">Bus back on the road</p></div>
-                <div class="stat-card"><div class="stat-icon"><i class="fas fa-vial"></i></div><h3>~200</h3><p data-en="Automated tests per deployment" data-de="Automatisierte Tests pro Deployment">Automated tests per deployment</p></div>
-                <div class="stat-card"><div class="stat-icon"><i class="fas fa-bolt"></i></div><h3>HV 3E</h3><p data-en="High-voltage qualification" data-de="Hochvolt-Qualifikation">High-voltage qualification</p></div>
-            </div>
+        <figure class="media media--img media--light"><a href="assets/uav/architecture.svg" target="_blank" rel="noopener"><img src="assets/uav/architecture.svg" alt="Software architecture of the UAV autopilot: rate groups, HAL, platforms and CI verification" loading="lazy"></a></figure>
+      </article>
+      <article class="work" id="tracking">
+        <div class="work__text">
+          <h3 class="work__title" data-en="Tank detection and tracking on Jetson" data-de="Panzererkennung und Tracking auf Jetson">Tank detection and tracking on Jetson</h3>
+          <ul class="spec"><li>Personal project</li><li>YOLO26n · YOLOv8n</li><li>TensorRT FP16</li><li>C++ / CUDA</li><li>~93 FPS tracking</li></ul>
+          <p class="work__lead" data-en="From raw video to real-time multi-object tracking: training labels generated by a vision-language model from text prompts, YOLO detectors, and a C++ tracker I wrote from scratch for the Jetson AGX Orin." data-de="Vom Rohvideo zum Multi-Object-Tracking in Echtzeit: Trainingslabels von einem Vision-Language-Modell aus Textprompts, YOLO-Detektoren und ein C++-Tracker, den ich für den Jetson AGX Orin neu geschrieben habe.">From raw video to real-time multi-object tracking: training labels generated by a vision-language model from text prompts, YOLO detectors, and a C++ tracker I wrote from scratch for the Jetson AGX Orin.</p>
+          <details class="work__more">
+            <summary><span data-en="Case details" data-de="Details zum Projekt">Case details</span></summary>
+            <p data-en="LocateAnything-3B labels each frame from prompts such as &quot;military tank&quot;, so no box is drawn by hand. The detectors reach about 0.93 mAP@50. The Jetson pipeline uses a CUDA preprocessing kernel, a TensorRT FP16 engine and a Kalman + KLT tracker with Hungarian matching. A modified FastMOT with a PyTorch re-identification model covers the workstation side." data-de="LocateAnything-3B labelt jedes Bild aus Prompts wie &quot;military tank&quot;, ohne von Hand gezeichnete Boxen. Die Detektoren erreichen rund 0,93 mAP@50. Die Jetson-Pipeline nutzt einen CUDA-Vorverarbeitungskernel, eine TensorRT-FP16-Engine und einen Kalman-+-KLT-Tracker mit Hungarian Matching. Ein angepasstes FastMOT mit PyTorch-Re-Identifikation deckt die Workstation ab.">LocateAnything-3B labels each frame from prompts such as &quot;military tank&quot;, so no box is drawn by hand. The detectors reach about 0.93 mAP@50. The Jetson pipeline uses a CUDA preprocessing kernel, a TensorRT FP16 engine and a Kalman + KLT tracker with Hungarian matching. A modified FastMOT with a PyTorch re-identification model covers the workstation side.</p>
+            <dl class="facts"><div><dt data-en="Detection" data-de="Detektion">Detection</dt><dd data-en="133 FPS FP16 TensorRT vs 37 FPS PyTorch on Jetson AGX Orin" data-de="133 FPS FP16-TensorRT vs. 37 FPS PyTorch auf Jetson AGX Orin">133 FPS FP16 TensorRT vs 37 FPS PyTorch on Jetson AGX Orin</dd></div><div><dt data-en="Tracking" data-de="Tracking">Tracking</dt><dd data-en="~93 FPS in C++, 2.8× the Python pipeline" data-de="~93 FPS in C++, 2,8× die Python-Pipeline">~93 FPS in C++, 2.8× the Python pipeline</dd></div><div><dt data-en="Labels" data-de="Labels">Labels</dt><dd data-en="Open-vocabulary VLM, 8-bit quantized" data-de="Open-Vocabulary-VLM, 8-Bit-quantisiert">Open-vocabulary VLM, 8-bit quantized</dd></div></dl>
+            <p class="more-media"><a class="textlink" href="https://github.com/Abhi-Jha345/MOTwithyolo" target="_blank" rel="noopener">GitHub ↗</a> <a class="textlink" href="assets/mot/jetson_benchmark.png" target="_blank" rel="noopener" data-en="Benchmark chart ↗" data-de="Benchmark-Diagramm ↗">Benchmark chart ↗</a></p>
+          </details>
         </div>
-    </section>
+        <figure class="media"><video muted loop playsinline preload="none" poster="assets/mot/tank_tracking_jetson.jpg" aria-label="Two tanks tracked with stable IDs by the Jetson C++ pipeline"><source src="assets/mot/tank_tracking_jetson.mp4" type="video/mp4"></video><button class="vtoggle" type="button" aria-label="Play video" data-state="paused"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-play" d="M8 5v14l11-7z"/><path class="i-pause" d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button></figure>
+      </article>
+      <article class="work" id="vla">
+        <div class="work__text">
+          <h3 class="work__title" data-en="Language-conditioned picking with a small VLA" data-de="Sprachgesteuertes Greifen mit einem kleinen VLA">Language-conditioned picking with a small VLA</h3>
+          <ul class="spec"><li>Learning project</li><li>MuJoCo</li><li>Franka Panda · RB-Y1</li><li>ResNet-18 + CLIP</li><li>flow matching</li></ul>
+          <p class="work__lead" data-en="A simulated robot picks the item named in an instruction such as &quot;put the red box in the tote&quot;. The policy reads two cameras, the instruction and the joint state and outputs chunks of actions through a flow-matching head, trained by behaviour cloning." data-de="Ein simulierter Roboter greift das Objekt, das eine Anweisung wie &quot;put the red box in the tote&quot; nennt. Die Policy liest zwei Kameras, die Anweisung und den Gelenkzustand und gibt über einen Flow-Matching-Kopf Aktionsabschnitte aus, trainiert per Behaviour Cloning.">A simulated robot picks the item named in an instruction such as &quot;put the red box in the tote&quot;. The policy reads two cameras, the instruction and the joint state and outputs chunks of actions through a flow-matching head, trained by behaviour cloning.</p>
+          <details class="work__more">
+            <summary><span data-en="Case details" data-de="Details zum Projekt">Case details</span></summary>
+            <p data-en="I built the scenes, a scripted expert and the data pipeline, then trained the model. The video shows the scripted expert that generates the training data, not the learned policy. The policy is not solved yet: diagnostics showed it ignored the product name and missed grasps, and a weight-space edit made the instruction matter measurably without improving outcomes. Working out why is the part I learned most from." data-de="Ich habe die Szenen, einen skriptbasierten Experten und die Datenpipeline gebaut und dann das Modell trainiert. Das Video zeigt den skriptbasierten Experten, der die Trainingsdaten erzeugt, nicht die gelernte Policy. Die Policy ist noch nicht gelöst: Diagnosen zeigten, dass sie den Produktnamen ignorierte und Griffe verfehlte, und eine Gewichtsraum-Änderung machte die Anweisung messbar wirksam, ohne die Ergebnisse zu verbessern. Den Gründen nachzugehen, war für mich der lehrreichste Teil.">I built the scenes, a scripted expert and the data pipeline, then trained the model. The video shows the scripted expert that generates the training data, not the learned policy. The policy is not solved yet: diagnostics showed it ignored the product name and missed grasps, and a weight-space edit made the instruction matter measurably without improving outcomes. Working out why is the part I learned most from.</p>
+            <dl class="facts"><div><dt data-en="Expert" data-de="Experte">Expert</dt><dd data-en="95/100 episodes (warehouse), 100/100 (supermarket v2)" data-de="95/100 Episoden (Lager), 100/100 (Supermarkt v2)">95/100 episodes (warehouse), 100/100 (supermarket v2)</dd></div><div><dt data-en="Data" data-de="Daten">Data</dt><dd data-en="497 successful demonstrations, held-out evaluation seeds" data-de="497 erfolgreiche Demonstrationen, getrennte Evaluations-Seeds">497 successful demonstrations, held-out evaluation seeds</dd></div><div><dt data-en="Model" data-de="Modell">Model</dt><dd data-en="Fine-tuned ResNet-18 tokens, frozen CLIP text, 4-layer fusion, flow-matching decoder" data-de="Feinjustierte ResNet-18-Tokens, eingefrorener CLIP-Text, 4-Layer-Fusion, Flow-Matching-Decoder">Fine-tuned ResNet-18 tokens, frozen CLIP text, 4-layer fusion, flow-matching decoder</dd></div><div><dt data-en="Status" data-de="Status">Status</dt><dd data-en="Policy success still low; under active work" data-de="Erfolgsrate der Policy noch niedrig; in Arbeit">Policy success still low; under active work</dd></div></dl>
+            
+          </details>
+        </div>
+        <figure class="media"><video muted loop playsinline preload="none" poster="assets/vla/vla_sim_demo.jpg" aria-label="Scripted expert demonstrations in the warehouse and supermarket scenes"><source src="assets/vla/vla_sim_demo.mp4" type="video/mp4"></video><button class="vtoggle" type="button" aria-label="Play video" data-state="paused"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-play" d="M8 5v14l11-7z"/><path class="i-pause" d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button></figure>
+      </article>
+      <article class="work" id="bus">
+        <div class="work__text">
+          <h3 class="work__title" data-en="Autonomous electric bus" data-de="Autonomer Elektrobus">Autonomous electric bus</h3>
+          <ul class="spec"><li>PEM, RWTH Aachen</li><li>ROS 2</li><li>NVIDIA Jetson</li><li>stereo + LiDAR fusion</li><li>SIL 2 concept</li></ul>
+          <p class="work__lead" data-en="I brought a prototype bus with years of history back on the road from its wiring diagrams in two months, then integrated localisation, perception and heading control in ROS 2 and tested them on the moving vehicle." data-de="Ich habe einen Prototyp-Bus mit jahrelanger Historie anhand seiner Schaltpläne in zwei Monaten wieder fahrbereit gemacht und danach Lokalisierung, Wahrnehmung und Kursregelung in ROS 2 integriert und auf dem fahrenden Fahrzeug getestet.">I brought a prototype bus with years of history back on the road from its wiring diagrams in two months, then integrated localisation, perception and heading control in ROS 2 and tested them on the moving vehicle.</p>
+          <details class="work__more">
+            <summary><span data-en="Case details" data-de="Details zum Projekt">Case details</span></summary>
+            <p data-en="Stereo camera, LiDAR and odometry are fused for obstacle detection in bad weather, and YOLOv8 runs on the Jetson with TensorRT, trained on data labelled automatically by a vision-language model. I wrote a safety concept targeting SIL 2 in which a safety laser scanner reports via CIP Safety to a safety PLC. A Docker CI/CD pipeline runs about 200 automated tests including ISO 26262 unit tests before each deployment, and Ethernet HIL tests cut latency by more than an order of magnitude after Fast DDS tuning." data-de="Stereokamera, LiDAR und Odometrie werden zur Hinderniserkennung bei schlechtem Wetter fusioniert, und YOLOv8 läuft mit TensorRT auf dem Jetson, trainiert mit von einem Vision-Language-Modell automatisch gelabelten Daten. Ich habe ein Sicherheitskonzept mit Ziel SIL 2 geschrieben, in dem ein Sicherheitslaserscanner über CIP Safety an eine Sicherheits-SPS meldet. Eine Docker-CI/CD-Pipeline führt vor jedem Deployment rund 200 automatisierte Tests inklusive ISO-26262-Unit-Tests aus, und Ethernet-HIL-Tests senkten die Latenz nach dem Fast-DDS-Tuning um mehr als eine Größenordnung.">Stereo camera, LiDAR and odometry are fused for obstacle detection in bad weather, and YOLOv8 runs on the Jetson with TensorRT, trained on data labelled automatically by a vision-language model. I wrote a safety concept targeting SIL 2 in which a safety laser scanner reports via CIP Safety to a safety PLC. A Docker CI/CD pipeline runs about 200 automated tests including ISO 26262 unit tests before each deployment, and Ethernet HIL tests cut latency by more than an order of magnitude after Fast DDS tuning.</p>
+            <dl class="facts"><div><dt data-en="Role" data-de="Rolle">Role</dt><dd data-en="Student research assistant, 01/2024 – 09/2026" data-de="Wissenschaftliche Hilfskraft, 01/2024 – 09/2026">Student research assistant, 01/2024 – 09/2026</dd></div><div><dt data-en="Result" data-de="Ergebnis">Result</dt><dd data-en="On-vehicle debugging from days to hours" data-de="Fehlersuche am Fahrzeug von Tagen auf Stunden">On-vehicle debugging from days to hours</dd></div><div><dt data-en="Tooling" data-de="Werkzeuge">Tooling</dt><dd data-en="Docker, CI/CD, static analysis, agentic workflows with Claude Code and MCP servers" data-de="Docker, CI/CD, statische Analyse, agentische Workflows mit Claude Code und MCP-Servern">Docker, CI/CD, static analysis, agentic workflows with Claude Code and MCP servers</dd></div></dl>
+            
+          </details>
+        </div>
+        <figure class="media media--sheet"><div class="sheet"><div><span>vehicle</span><span>autonomous electric bus</span></div><div><span>compute</span><span>NVIDIA Jetson</span></div><div><span>middleware</span><span>ROS 2 · Fast DDS</span></div><div><span>perception</span><span>stereo · LiDAR · odometry</span></div><div><span>detector</span><span>YOLOv8 · TensorRT</span></div><div><span>safety</span><span>SICK scanner → safety PLC</span></div><div><span>tests</span><span>~200 per deployment</span></div></div></figure>
+      </article>
+      <article class="work" id="hyperloop">
+        <div class="work__text">
+          <h3 class="work__title" data-en="Hyperloop powertrain" data-de="Hyperloop-Antriebsstrang">Hyperloop powertrain</h3>
+          <ul class="spec"><li>Tachyon Hyperloop</li><li>team lead · 8 students</li><li>TI C2000</li><li>90 kW axial-flux</li><li>350 V pack</li></ul>
+          <p class="work__lead" data-en="As team lead for powertrain and control I took the drive from scratch to its first demonstration in 1.5 years. We passed all rulebook tests at the European Hyperloop Week and received an award for a promising electrical subsystem." data-de="Als Teamleiter für Antrieb und Regelung habe ich den Antrieb in 1,5 Jahren von null bis zur ersten Demonstration gebracht. Wir haben alle Regelwerkstests der European Hyperloop Week bestanden und eine Auszeichnung für ein vielversprechendes elektrisches Subsystem erhalten.">As team lead for powertrain and control I took the drive from scratch to its first demonstration in 1.5 years. We passed all rulebook tests at the European Hyperloop Week and received an award for a promising electrical subsystem.</p>
+          <details class="work__more">
+            <summary><span data-en="Case details" data-de="Details zum Projekt">Case details</span></summary>
+            <p data-en="I wrote the brake ECU software in Simulink with Embedded Coder including unit and module tests, commissioned the axial-flux motor on the HV inverter and tuned its speed control via XCP, and integrated a 350 V prototype battery pack with temperature and cell monitoring, emergency shutdown and balancing." data-de="Ich habe die Bremssteuergeräte-Software in Simulink mit Embedded Coder inklusive Unit- und Modultests entwickelt, den Axialflussmotor am HV-Umrichter in Betrieb genommen und seine Drehzahlregelung per XCP abgestimmt sowie ein 350-V-Prototyp-Batteriepaket mit Temperatur- und Zellüberwachung, Notabschaltung und Balancing integriert.">I wrote the brake ECU software in Simulink with Embedded Coder including unit and module tests, commissioned the axial-flux motor on the HV inverter and tuned its speed control via XCP, and integrated a 350 V prototype battery pack with temperature and cell monitoring, emergency shutdown and balancing.</p>
+            <dl class="facts"><div><dt data-en="Period" data-de="Zeitraum">Period</dt><dd data-en="01/2023 – 09/2024" data-de="01/2023 – 09/2024">01/2023 – 09/2024</dd></div><div><dt data-en="Qualification" data-de="Qualifikation">Qualification</dt><dd data-en="HV qualification, level 3E" data-de="HV-Qualifikation, Stufe 3E">HV qualification, level 3E</dd></div></dl>
+            
+          </details>
+        </div>
+        <figure class="media media--sheet"><div class="sheet"><div><span>team</span><span>8 students</span></div><div><span>brake ECU</span><span>Simulink · Embedded Coder · TI C2000</span></div><div><span>motor</span><span>90 kW axial flux · resolver</span></div><div><span>battery</span><span>350 V · cell monitoring</span></div><div><span>tools</span><span>XCP · CANape · CAPL</span></div><div><span>event</span><span>European Hyperloop Week</span></div></div></figure>
+      </article>
+    <div class="more">
+      <h2 class="section-title section-title--small" data-en="More engineering" data-de="Weitere Projekte">More engineering</h2>
+      <ul class="minis">
+        <li class="mini">
+          <h3 data-en="Fuel-cell hybrid truck" data-de="Brennstoffzellen-Hybrid-Lkw">Fuel-cell hybrid truck</h3>
+          <ul class="spec"><li>PEM</li><li>ECU</li><li>CAN J1939</li><li>XCP</li></ul>
+          <p data-en="Commissioned a new ECU and cut CAN integration effort by 70% with MATLAB scripts that process about 800 signals. Built a one-pedal drive with recuperation within motor, battery and fuel-cell limits." data-de="Neues Steuergerät in Betrieb genommen und den CAN-Integrationsaufwand mit MATLAB-Skripten für rund 800 Signale um 70 % gesenkt. One-Pedal-Drive mit Rekuperation innerhalb der Grenzen von Motoren, Batterie und Brennstoffzelle entwickelt.">Commissioned a new ECU and cut CAN integration effort by 70% with MATLAB scripts that process about 800 signals. Built a one-pedal drive with recuperation within motor, battery and fuel-cell limits.</p>
+          
+        </li>
+        <li class="mini">
+          <h3 data-en="Lateral control under delay" data-de="Querregelung unter Totzeit">Lateral control under delay</h3>
+          <ul class="spec"><li>PEM</li><li>Stanley</li><li>LTV-MPC</li></ul>
+          <p data-en="Closed-loop analysis with realistic noise, dropouts and actuator delay. Found and fixed two delay-compensation bugs and brought tracking error from metres to centimetres." data-de="Closed-Loop-Analyse mit realistischem Rauschen, Aussetzern und Aktortotzeit. Zwei Fehler in der Totzeitkompensation behoben und den Spurfehler von Metern auf Zentimeter gesenkt.">Closed-loop analysis with realistic noise, dropouts and actuator delay. Found and fixed two delay-compensation bugs and brought tracking error from metres to centimetres.</p>
+          
+        </li>
+        <li class="mini">
+          <h3 data-en="Agentic engineering" data-de="Agentische Entwicklung">Agentic engineering</h3>
+          <ul class="spec"><li>Claude Code</li><li>sub-agents</li><li>MCP</li></ul>
+          <p data-en="I use custom skills, sub-agents, hooks and MCP servers to write scripts and tests around vehicle software, including an MCP server for MATLAB that generates models and runs their unit tests." data-de="Ich nutze eigene Skills, Sub-Agents, Hooks und MCP-Server, um Skripte und Tests rund um Fahrzeugsoftware zu erstellen, darunter einen MCP-Server für MATLAB, der Modelle erzeugt und ihre Unit-Tests ausführt.">I use custom skills, sub-agents, hooks and MCP servers to write scripts and tests around vehicle software, including an MCP server for MATLAB that generates models and runs their unit tests.</p>
+          
+        </li>
+        <li class="mini">
+          <h3 data-en="Battery cell test station" data-de="Batteriezellen-Prüfstation">Battery cell test station</h3>
+          <ul class="spec"><li>Personal project</li><li>TIA Portal V20</li><li>S7-1500</li><li>SCL</li></ul>
+          <p data-en="Step chain, PackML-style modes, fault reactions, E-stop and guard-door logic, WinCC Unified HMI and unit tests in CI." data-de="Schrittkette, PackML-Betriebsarten, Fehlerreaktionen, Not-Halt- und Schutztürlogik, WinCC-Unified-HMI und Unit-Tests in CI.">Step chain, PackML-style modes, fault reactions, E-stop and guard-door logic, WinCC Unified HMI and unit tests in CI.</p>
+          <a class="textlink" href="https://github.com/Abhi-Jha345/TIA_portal" target="_blank" rel="noopener">GitHub ↗</a>
+        </li>
+        <li class="mini">
+          <h3 data-en="Drive and bearing test benches" data-de="Antriebs- und Lagerprüfstände">Drive and bearing test benches</h3>
+          <ul class="spec"><li>ENGIRO</li><li>Elgeti</li><li>CODESYS</li><li>LabVIEW</li></ul>
+          <p data-en="PLC control for 48 V and 96 V drive test benches to IEC 61131-3, and a DBC import script that saved up to 90% of manual signal work. Bearing test benches automated in LabVIEW." data-de="PLC-Steuerung für 48-V- und 96-V-Antriebsprüfstände nach IEC 61131-3 und ein DBC-Importskript, das bis zu 90 % der manuellen Signalarbeit einsparte. Lagerprüfstände in LabVIEW automatisiert.">PLC control for 48 V and 96 V drive test benches to IEC 61131-3, and a DBC import script that saved up to 90% of manual signal work. Bearing test benches automated in LabVIEW.</p>
+          
+        </li>
+      </ul>
+    </div>
+  </section>
 
-    <!-- Skills Section -->
-
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title" data-en="Technical Skills" data-de="Technische Fähigkeiten">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category"><h3><i class="fas fa-robot"></i> <span data-en="Autonomy &amp; Perception" data-de="Autonomie &amp; Wahrnehmung">Autonomy &amp; Perception</span></h3><div class="skill-items"><span class="skill-tag">ROS 2</span><span class="skill-tag">Fast DDS (QoS, discovery, zero-copy)</span><span class="skill-tag">Sensor fusion (stereo, LiDAR, odometry)</span><span class="skill-tag">YOLOv8</span><span class="skill-tag">Transformers / NanoSAM</span><span class="skill-tag">TensorRT</span><span class="skill-tag">NVIDIA Jetson</span><span class="skill-tag">CARLA</span><span class="skill-tag">MPC &amp; Stanley control</span></div></div>
-                <div class="skill-category"><h3><i class="fas fa-car"></i> <span data-en="Vehicle E/E &amp; Networks" data-de="Fahrzeug-E/E &amp; Netzwerke">Vehicle E/E &amp; Networks</span></h3><div class="skill-items"><span class="skill-tag">Prototype bring-up</span><span class="skill-tag">CAN / SAE J1939</span><span class="skill-tag">DBC</span><span class="skill-tag">XCP</span><span class="skill-tag">Vector CANape</span><span class="skill-tag">Vector CANoe</span><span class="skill-tag">CAPL</span><span class="skill-tag">Oscilloscope</span><span class="skill-tag">HV systems (HV 3E)</span></div></div>
-                <div class="skill-category"><h3><i class="fas fa-microchip"></i> <span data-en="Embedded &amp; Safety" data-de="Embedded &amp; Sicherheit">Embedded &amp; Safety</span></h3><div class="skill-items"><span class="skill-tag">MATLAB/Simulink</span><span class="skill-tag">Embedded Coder</span><span class="skill-tag">TI C2000</span><span class="skill-tag">C++</span><span class="skill-tag">ISO 26262 unit tests</span><span class="skill-tag">Static code analysis</span><span class="skill-tag">Safety concept (SIL 2)</span><span class="skill-tag">CIP Safety</span></div></div>
-                <div class="skill-category"><h3><i class="fas fa-cogs"></i> <span data-en="Automation &amp; Test" data-de="Automatisierung &amp; Test">Automation &amp; Test</span></h3><div class="skill-items"><span class="skill-tag">Docker CI/CD</span><span class="skill-tag">GitHub Actions</span><span class="skill-tag">Hardware-in-the-loop</span><span class="skill-tag">CODESYS (IEC 61131-3)</span><span class="skill-tag">TIA Portal / SCL (personal project)</span><span class="skill-tag">LabVIEW</span><span class="skill-tag">Linux &amp; Bash</span><span class="skill-tag">Python</span></div></div>
-                <div class="skill-category"><h3><i class="fas fa-magic"></i> <span data-en="AI-assisted Engineering" data-de="KI-gestützte Entwicklung">AI-assisted Engineering</span></h3><div class="skill-items"><span class="skill-tag">Claude Code</span><span class="skill-tag">Custom skills &amp; sub-agents</span><span class="skill-tag">Hooks for code quality</span><span class="skill-tag">MCP servers</span><span class="skill-tag">MCP server for MATLAB (model generation, unit tests)</span></div></div>
+  <section class="career" id="career" aria-labelledby="career-title">
+    <div class="career__intro">
+      <h2 class="section-title" id="career-title" data-en="Career" data-de="Werdegang">Career</h2>
+      <p data-en="Automation engineer (M.Sc., RWTH Aachen) with work across autonomous vehicles, embedded control and test automation. Most of my work sits where software meets the machine: commissioning, measuring and finding the real cause." data-de="Automatisierungsingenieur (M.Sc., RWTH Aachen) mit Erfahrung in autonomen Fahrzeugen, Embedded-Regelung und Testautomatisierung. Der Großteil meiner Arbeit liegt dort, wo Software auf die Maschine trifft: Inbetriebnahme, Messen und die wahre Ursache finden.">Automation engineer (M.Sc., RWTH Aachen) with work across autonomous vehicles, embedded control and test automation. Most of my work sits where software meets the machine: commissioning, measuring and finding the real cause.</p>
+      <p class="career__cv"><a class="textlink" href="https://www.linkedin.com/in/abhishek-j-3497a8121" target="_blank" rel="noopener">LinkedIn ↗</a> <a class="textlink" href="https://github.com/Abhi-Jha345" target="_blank" rel="noopener">GitHub ↗</a></p>
+    </div>
+    <div class="career__list">
+      <ol class="jobs">
+          <li class="job">
+            <p class="job__date">01/2024 – 09/2026</p>
+            <div>
+              <h3 data-en="Student Research Assistant, Autonomous Systems Software" data-de="Wissenschaftliche Hilfskraft, Software für autonome Systeme">Student Research Assistant, Autonomous Systems Software</h3>
+              <p class="job__org">PEM, RWTH Aachen University</p>
+              <p data-en="Autonomous electric bus and fuel-cell hybrid truck: vehicle bring-up, ROS 2 integration, perception on Jetson, CI/CD and HIL testing, ECU commissioning." data-de="Autonomer Elektrobus und Brennstoffzellen-Hybrid-Lkw: Fahrzeug-Inbetriebnahme, ROS-2-Integration, Wahrnehmung auf Jetson, CI/CD- und HIL-Tests, Steuergeräte-Inbetriebnahme.">Autonomous electric bus and fuel-cell hybrid truck: vehicle bring-up, ROS 2 integration, perception on Jetson, CI/CD and HIL testing, ECU commissioning.</p>
+              <ul class="tags"><li>ROS 2</li><li>Jetson</li><li>TensorRT</li><li>Docker</li><li>CAN J1939</li><li>XCP</li></ul>
             </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title" data-en="Featured Projects" data-de="Ausgewählte Projekte">Featured Projects</h2>
-            <div class="projects-grid">
-
-                <div class="project-card featured">
-                    <div class="project-media"><video controls muted loop playsinline preload="none" poster="assets/videos/thesis_line_detection.jpg"><source src="assets/videos/thesis_line_detection.mp4" type="video/mp4"></video></div>
-                    <div class="project-icon"><i class="fas fa-road"></i></div>
-                    <h3 data-en="Master Thesis: Real-time Line Detection with Transformers" data-de="Masterarbeit: Echtzeit-Linienerkennung mit Transformern">Master Thesis: Real-time Line Detection with Transformers</h3>
-                    <p data-en="Compared classical methods (Hough, LSD), CNNs and transformers for line detection on an AGV. Modified the model architecture for the task, built a sim-to-real dataset from CARLA and real recordings, trained on an HPC cluster, and brought the full pipeline (NanoSAM segmentation, GPU-RANSAC, 3D back-projection, Kalman filter) to real time on a Jetson AGX Orin. The video shows the model on real recordings with the live IoU score." data-de="Vergleich klassischer Verfahren (Hough, LSD), CNNs und Transformer für die Linienerkennung an einem FTF. Modellarchitektur für die Aufgabe angepasst, Sim-to-Real-Datensatz aus CARLA und realen Aufnahmen erstellt, auf einem HPC-Cluster trainiert und die gesamte Pipeline (NanoSAM-Segmentierung, GPU-RANSAC, 3D-Rückprojektion, Kalman-Filter) in Echtzeit auf einen Jetson AGX Orin gebracht. Das Video zeigt das Modell auf realen Aufnahmen mit dem laufenden IoU-Wert.">Compared classical methods (Hough, LSD), CNNs and transformers for line detection on an AGV. Modified the model architecture for the task, built a sim-to-real dataset from CARLA and real recordings, trained on an HPC cluster, and brought the full pipeline (NanoSAM segmentation, GPU-RANSAC, 3D back-projection, Kalman filter) to real time on a Jetson AGX Orin. The video shows the model on real recordings with the live IoU score.</p>
-                    <div class="project-tags"><span>Transformers</span><span>NanoSAM</span><span>TensorRT</span><span>CARLA</span><span>Jetson AGX Orin</span><span>Grade 1.0</span></div>
-                    
-                </div>
-
-                <div class="project-card featured">
-                    <div class="project-media project-gallery">
-                        <figure><a href="assets/uav/architecture.svg" target="_blank" rel="noopener"><img src="assets/uav/architecture.svg" alt="Software architecture of the UAV autopilot" loading="lazy"></a><figcaption data-en="Software architecture: rate groups, HAL, platforms and CI verification" data-de="Softwarearchitektur: Ratengruppen, HAL, Plattformen und CI-Verifikation">Software architecture: rate groups, HAL, platforms and CI verification</figcaption></figure>
-                        <figure><a href="assets/uav/sim2real_campaign.png" target="_blank" rel="noopener"><img src="assets/uav/sim2real_campaign.png" alt="Sim-to-real Monte Carlo campaign results" loading="lazy"></a><figcaption data-en="Sim-to-real Monte Carlo: ideal world vs 10 realistic draws" data-de="Sim-to-Real-Monte-Carlo: ideale Welt vs. 10 realistische Ziehungen">Sim-to-real Monte Carlo: ideal world vs 10 realistic draws</figcaption></figure>
-                    </div>
-                    <div class="project-icon"><i class="fas fa-plane"></i></div>
-                    <h3 data-en="Fixed-wing UAV Autopilot (personal project)" data-de="Starrflügler-UAV-Autopilot (eigenes Projekt)">Fixed-wing UAV Autopilot (personal project)</h3>
-                    <p data-en="Safety-critical C++17 autopilot for a fixed-wing UAV, built in a lightweight DO-178C style: requirements, hazard assessment and a code-to-test trace matrix are gated in CI. A Simulink 6-DOF flight simulator with 10/50/200 Hz loops, Unreal 3D view and live cockpit dashboard serves as the reference. I designed gain-scheduled structured H-infinity attitude and rate control with anti-windup and a TECS energy controller, and checked them in standard flight-test cycles and a sim-to-real Monte Carlo campaign with airframe uncertainty, servo limits, sensor noise, wind and turbulence. The C++ core is verified back-to-back against Simulink traces, runs software-in-the-loop against JSBSim and cross-compiles for an STM32 Cortex-M4F. A ROS 2 companion with Gazebo and OpenVINS for GNSS-denied navigation is in progress. Built with Claude Code: sub-agents in parallel git worktrees, clang-format/clang-tidy hooks and an MCP server for MATLAB." data-de="Sicherheitskritischer C++17-Autopilot für ein Starrflügler-UAV im Stil eines schlanken DO-178C-Prozesses: Anforderungen, Gefährdungsanalyse und eine Trace-Matrix von Code zu Tests werden in der CI geprüft. Als Referenz dient ein Simulink-6-DOF-Flugsimulator mit 10/50/200-Hz-Schleifen, Unreal-3D-Ansicht und Live-Cockpit. Ich habe eine gain-geplante strukturierte H-unendlich-Lage- und Ratenregelung mit Anti-Windup sowie einen TECS-Energieregler entworfen und in Standard-Flugtestzyklen und einer Sim-to-Real-Monte-Carlo-Kampagne mit Zellenunsicherheit, Servogrenzen, Sensorrauschen, Wind und Turbulenz geprüft. Der C++-Kern wird Back-to-Back gegen Simulink-Traces verifiziert, läuft Software-in-the-Loop gegen JSBSim und lässt sich für einen STM32 Cortex-M4F cross-kompilieren. Ein ROS-2-Companion mit Gazebo und OpenVINS für GNSS-freie Navigation ist in Arbeit. Entwickelt mit Claude Code: Sub-Agents in parallelen Git-Worktrees, clang-format/clang-tidy-Hooks und ein MCP-Server für MATLAB.">Safety-critical C++17 autopilot for a fixed-wing UAV, built in a lightweight DO-178C style: requirements, hazard assessment and a code-to-test trace matrix are gated in CI. A Simulink 6-DOF flight simulator with 10/50/200 Hz loops, Unreal 3D view and live cockpit dashboard serves as the reference. I designed gain-scheduled structured H-infinity attitude and rate control with anti-windup and a TECS energy controller, and checked them in standard flight-test cycles and a sim-to-real Monte Carlo campaign with airframe uncertainty, servo limits, sensor noise, wind and turbulence. The C++ core is verified back-to-back against Simulink traces, runs software-in-the-loop against JSBSim and cross-compiles for an STM32 Cortex-M4F. A ROS 2 companion with Gazebo and OpenVINS for GNSS-denied navigation is in progress. Built with Claude Code: sub-agents in parallel git worktrees, clang-format/clang-tidy hooks and an MCP server for MATLAB.</p>
-                    <div class="project-tags"><span>C++17</span><span>Simulink</span><span>H∞ / TECS</span><span>DO-178C style</span><span>JSBSim SIL</span><span>STM32</span><span>ROS 2 / OpenVINS</span><span>Claude Code</span></div>
-                </div>
-
-                <div class="project-card featured">
-                    <div class="project-media"><video controls muted loop playsinline preload="none" poster="assets/mot/tank_tracking_jetson.jpg"><source src="assets/mot/tank_tracking_jetson.mp4" type="video/mp4"></video></div>
-                    <div class="project-icon"><i class="fas fa-crosshairs"></i></div>
-                    <h3 data-en="Tank Detection &amp; Multi-Object Tracking on Jetson (personal project)" data-de="Panzererkennung &amp; Multi-Object-Tracking auf Jetson (eigenes Projekt)">Tank Detection &amp; Multi-Object Tracking on Jetson (personal project)</h3>
-                    <p data-en="End-to-end pipeline from raw video to real-time tracking of military vehicles. Training data is labelled automatically by the open-vocabulary vision-language model LocateAnything-3B from text prompts, so no boxes are drawn by hand. YOLOv8n and YOLO26n detectors reach about 0.93 mAP@50 on the tank set. Two deployment targets: a modified FastMOT in Python with a PyTorch ReID model, and a C++ pipeline I wrote from scratch for the Jetson AGX Orin with a CUDA preprocessing kernel, a TensorRT FP16 engine and a Kalman + KLT tracker with Hungarian matching. The C++ pipeline tracks at about 93 FPS, 2.8 times faster than the Python version." data-de="Durchgängige Pipeline vom Rohvideo bis zum Echtzeit-Tracking militärischer Fahrzeuge. Die Trainingsdaten werden automatisch vom Open-Vocabulary-Vision-Language-Modell LocateAnything-3B anhand von Textprompts gelabelt, ohne von Hand gezeichnete Boxen. YOLOv8n- und YOLO26n-Detektoren erreichen rund 0,93 mAP@50 auf dem Panzer-Datensatz. Zwei Zielplattformen: ein angepasstes FastMOT in Python mit PyTorch-ReID-Modell und eine von mir neu geschriebene C++-Pipeline für den Jetson AGX Orin mit CUDA-Vorverarbeitungskernel, TensorRT-FP16-Engine und Kalman-+-KLT-Tracker mit Hungarian Matching. Die C++-Pipeline trackt mit rund 93 FPS, 2,8-mal schneller als die Python-Version.">End-to-end pipeline from raw video to real-time tracking of military vehicles. Training data is labelled automatically by the open-vocabulary vision-language model LocateAnything-3B from text prompts, so no boxes are drawn by hand. YOLOv8n and YOLO26n detectors reach about 0.93 mAP@50 on the tank set. Two deployment targets: a modified FastMOT in Python with a PyTorch ReID model, and a C++ pipeline I wrote from scratch for the Jetson AGX Orin with a CUDA preprocessing kernel, a TensorRT FP16 engine and a Kalman + KLT tracker with Hungarian matching. The C++ pipeline tracks at about 93 FPS, 2.8 times faster than the Python version.</p>
-                    <div class="project-tags"><span>YOLO26 / YOLOv8</span><span>LocateAnything VLM</span><span>TensorRT FP16</span><span>CUDA</span><span>C++</span><span>Kalman + KLT</span><span>Jetson AGX Orin</span></div>
-                    <div class="project-media project-gallery" style="margin:1.2rem 0 0;border-radius:8px"><figure><a href="assets/mot/jetson_benchmark.png" target="_blank" rel="noopener"><img src="assets/mot/jetson_benchmark.png" alt="Jetson AGX Orin benchmark" loading="lazy"></a><figcaption data-en="Jetson AGX Orin: detection throughput by precision, and Python vs C++ tracking pipeline" data-de="Jetson AGX Orin: Detektionsdurchsatz nach Präzision und Python- vs. C++-Tracking-Pipeline">Jetson AGX Orin: detection throughput by precision, and Python vs C++ tracking pipeline</figcaption></figure></div>
-                    <a class="project-link" href="https://github.com/Abhi-Jha345/MOTwithyolo" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
-                </div>
-
-                <div class="project-card">
-                    
-                    <div class="project-icon"><i class="fas fa-bus"></i></div>
-                    <h3 data-en="Autonomous Electric Bus (UPBUS, PEM RWTH)" data-de="Autonomer Elektrobus (UPBUS, PEM RWTH)">Autonomous Electric Bus (UPBUS, PEM RWTH)</h3>
-                    <p data-en="Recommissioned a prototype with years of development history from its wiring diagrams in two months and onboarded the team. Integrated localisation, odometry, perception and heading control in ROS 2 and tested it on the moving vehicle, with stereo camera, LiDAR and odometry fusion for obstacle detection and YOLOv8 on the Jetson with TensorRT." data-de="Einen Prototyp mit jahrelanger Entwicklungshistorie anhand der Schaltpläne in zwei Monaten wieder in Betrieb genommen und das Team eingearbeitet. Lokalisierung, Odometrie, Wahrnehmung und Kursregelung in ROS 2 integriert und auf dem fahrenden Fahrzeug getestet, mit Fusion aus Stereokamera, LiDAR und Odometrie zur Hinderniserkennung sowie YOLOv8 auf dem Jetson mit TensorRT.">Recommissioned a prototype with years of development history from its wiring diagrams in two months and onboarded the team. Integrated localisation, odometry, perception and heading control in ROS 2 and tested it on the moving vehicle, with stereo camera, LiDAR and odometry fusion for obstacle detection and YOLOv8 on the Jetson with TensorRT.</p>
-                    <div class="project-tags"><span>ROS 2</span><span>Sensor fusion</span><span>YOLOv8</span><span>TensorRT</span><span>NVIDIA Jetson</span></div>
-                    
-                </div>
-
-                <div class="project-card">
-                    
-                    <div class="project-icon"><i class="fas fa-vial"></i></div>
-                    <h3 data-en="CI/CD and Hardware-in-the-Loop for the Bus" data-de="CI/CD und Hardware-in-the-Loop für den Bus">CI/CD and Hardware-in-the-Loop for the Bus</h3>
-                    <p data-en="Built a Docker-based CI/CD pipeline that runs about 200 automated tests before each deployment, including unit and module tests to ISO 26262 with static code analysis. On-vehicle debugging went from days to hours. Ethernet HIL tests between simulation and the Jetson cut latency by more than an order of magnitude after tuning Fast DDS." data-de="Docker-basierte CI/CD-Pipeline aufgebaut, die vor jedem Deployment rund 200 automatisierte Tests ausführt, darunter Unit- und Modultests nach ISO 26262 mit statischer Codeanalyse. Die Fehlersuche am Fahrzeug sank von Tagen auf Stunden. Ethernet-HIL-Tests zwischen Simulation und Jetson senkten die Latenz nach dem Tuning von Fast DDS um mehr als eine Größenordnung.">Built a Docker-based CI/CD pipeline that runs about 200 automated tests before each deployment, including unit and module tests to ISO 26262 with static code analysis. On-vehicle debugging went from days to hours. Ethernet HIL tests between simulation and the Jetson cut latency by more than an order of magnitude after tuning Fast DDS.</p>
-                    <div class="project-tags"><span>Docker</span><span>CI/CD</span><span>ISO 26262</span><span>HIL</span><span>Fast DDS</span></div>
-                    
-                </div>
-
-                <div class="project-card">
-                    
-                    <div class="project-icon"><i class="fas fa-magic"></i></div>
-                    <h3 data-en="Agentic Engineering Workflows" data-de="Agentische Entwicklungs-Workflows">Agentic Engineering Workflows</h3>
-                    <p data-en="In the UPBUS project and my own projects I use agentic coding workflows with Claude Code, custom skills, sub-agents, hooks and MCP servers to write the scripts and tests around vehicle software. An MCP server for MATLAB generates models and runs their unit tests automatically. My job-search pipeline runs hourly on GitHub Actions in the same way." data-de="Im UPBUS-Projekt und in eigenen Projekten nutze ich agentische Coding-Workflows mit Claude Code, eigenen Skills, Sub-Agents, Hooks und MCP-Servern, um Skripte und Tests rund um die Fahrzeugsoftware zu erstellen. Ein MCP-Server für MATLAB erzeugt Modelle und führt ihre Unit-Tests automatisch aus. Auch meine Jobsuche läuft so stündlich über GitHub Actions.">In the UPBUS project and my own projects I use agentic coding workflows with Claude Code, custom skills, sub-agents, hooks and MCP servers to write the scripts and tests around vehicle software. An MCP server for MATLAB generates models and runs their unit tests automatically. My job-search pipeline runs hourly on GitHub Actions in the same way.</p>
-                    <div class="project-tags"><span>Claude Code</span><span>Sub-agents</span><span>MCP</span><span>GitHub Actions</span><span>MATLAB</span></div>
-                    
-                </div>
-
-                <div class="project-card">
-                    
-                    <div class="project-icon"><i class="fas fa-truck"></i></div>
-                    <h3 data-en="Fuel-cell Hybrid Truck (SELV2, PEM RWTH)" data-de="Brennstoffzellen-Hybrid-Lkw (SELV2, PEM RWTH)">Fuel-cell Hybrid Truck (SELV2, PEM RWTH)</h3>
-                    <p data-en="Commissioned and tested a new ECU and cut CAN integration effort by 70% with MATLAB scripts for XCP calibration and automated processing of about 800 VCU signals. Developed a one-pedal-drive function with recuperation that respects motor, battery and fuel-cell limits, and validated it on the vehicle." data-de="Ein neues Steuergerät in Betrieb genommen und getestet und den CAN-Integrationsaufwand mit MATLAB-Skripten für XCP-Kalibrierung und die automatische Verarbeitung von rund 800 VCU-Signalen um 70 % reduziert. Eine One-Pedal-Drive-Funktion mit Rekuperation unter Einhaltung der Grenzen von Motoren, Batterie und Brennstoffzelle entwickelt und am Fahrzeug validiert.">Commissioned and tested a new ECU and cut CAN integration effort by 70% with MATLAB scripts for XCP calibration and automated processing of about 800 VCU signals. Developed a one-pedal-drive function with recuperation that respects motor, battery and fuel-cell limits, and validated it on the vehicle.</p>
-                    <div class="project-tags"><span>ECU</span><span>CAN J1939</span><span>XCP</span><span>MATLAB</span><span>Recuperation</span></div>
-                    
-                </div>
-
-                <div class="project-card">
-                    
-                    <div class="project-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3 data-en="Lateral Control under Delay and Noise" data-de="Querregelung unter Totzeit und Rauschen">Lateral Control under Delay and Noise</h3>
-                    <p data-en="Closed-loop analysis of Stanley and LTV-MPC controllers with realistic detection noise, dropouts, actuator delay and steering limits. Found and fixed two delay-compensation bugs and tuned the MPC so that tracking error fell from metres to centimetres, checked with Bode and Nyquist margins." data-de="Closed-Loop-Analyse von Stanley- und LTV-MPC-Reglern mit realistischem Messrauschen, Aussetzern, Aktortotzeit und Lenkbegrenzung. Zwei Fehler in der Totzeitkompensation gefunden und behoben und den MPC so abgestimmt, dass der Spurfehler von Metern auf Zentimeter sank, geprüft über Bode- und Nyquist-Reserven.">Closed-loop analysis of Stanley and LTV-MPC controllers with realistic detection noise, dropouts, actuator delay and steering limits. Found and fixed two delay-compensation bugs and tuned the MPC so that tracking error fell from metres to centimetres, checked with Bode and Nyquist margins.</p>
-                    <div class="project-tags"><span>MPC</span><span>Stanley</span><span>Control</span><span>MATLAB</span></div>
-                    
-                </div>
-
-                <div class="project-card">
-                    
-                    <div class="project-icon"><i class="fas fa-bolt"></i></div>
-                    <h3 data-en="Hyperloop Powertrain (Tachyon Hyperloop)" data-de="Hyperloop-Antriebsstrang (Tachyon Hyperloop)">Hyperloop Powertrain (Tachyon Hyperloop)</h3>
-                    <p data-en="Led a team of 8 students in powertrain and control. Took the powertrain from scratch to its first demonstration in 1.5 years, passed all rulebook tests at the European Hyperloop Week and received an award for a promising electrical subsystem. Wrote the brake ECU software in Simulink for TI C2000, commissioned a 90 kW axial-flux motor on the HV inverter and integrated a 350 V battery pack." data-de="Ein Team von 8 Studierenden im Bereich Antrieb und Regelung geleitet. Den Antriebsstrang in 1,5 Jahren von null bis zur ersten Demonstration gebracht, alle Regelwerkstests der European Hyperloop Week bestanden und eine Auszeichnung für ein vielversprechendes elektrisches Subsystem erhalten. Bremssteuergeräte-Software in Simulink für TI C2000 entwickelt, einen 90-kW-Axialflussmotor am HV-Umrichter in Betrieb genommen und ein 350-V-Batteriepaket integriert.">Led a team of 8 students in powertrain and control. Took the powertrain from scratch to its first demonstration in 1.5 years, passed all rulebook tests at the European Hyperloop Week and received an award for a promising electrical subsystem. Wrote the brake ECU software in Simulink for TI C2000, commissioned a 90 kW axial-flux motor on the HV inverter and integrated a 350 V battery pack.</p>
-                    <div class="project-tags"><span>Simulink</span><span>TI C2000</span><span>HV</span><span>XCP</span><span>CAPL</span></div>
-                    
-                </div>
-
-                <div class="project-card">
-                    
-                    <div class="project-icon"><i class="fas fa-industry"></i></div>
-                    <h3 data-en="Battery Cell Test &amp; Sort Station (personal project)" data-de="Batteriezellen-Prüf- und Sortierstation (eigenes Projekt)">Battery Cell Test &amp; Sort Station (personal project)</h3>
-                    <p data-en="Personal TIA Portal V20 project on a SIMATIC S7-1500: SCL step chain, PackML-style modes, fault reactions, E-stop and guard-door logic, WinCC Unified HMI, plant simulation and unit tests in CI." data-de="Eigenes TIA-Portal-V20-Projekt auf einer SIMATIC S7-1500: SCL-Schrittkette, PackML-Betriebsarten, Fehlerreaktionen, Not-Halt- und Schutztürlogik, WinCC-Unified-HMI, Anlagensimulation und Unit-Tests in CI.">Personal TIA Portal V20 project on a SIMATIC S7-1500: SCL step chain, PackML-style modes, fault reactions, E-stop and guard-door logic, WinCC Unified HMI, plant simulation and unit tests in CI.</p>
-                    <div class="project-tags"><span>TIA Portal</span><span>SCL</span><span>S7-1500</span><span>WinCC Unified</span><span>CI</span></div>
-                    <a class="project-link" href="https://github.com/Abhi-Jha345/TIA_portal" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
-                </div>
-
-                <div class="project-card">
-                    
-                    <div class="project-icon"><i class="fas fa-cogs"></i></div>
-                    <h3 data-en="Drive &amp; Bearing Test Benches (ENGIRO, Elgeti)" data-de="Antriebs- und Lagerprüfstände (ENGIRO, Elgeti)">Drive &amp; Bearing Test Benches (ENGIRO, Elgeti)</h3>
-                    <p data-en="Built the PLC control for 48 V and 96 V drive test benches in ST and FBD to IEC 61131-3, and cut manual signal handling by up to 90% with a Python script that imports DBC files into CODESYS. Designed bearing test benches, programmed them in CODESYS and automated the test sequences in LabVIEW." data-de="PLC-Steuerung für 48-V- und 96-V-Antriebsprüfstände in ST und FUP nach IEC 61131-3 aufgebaut und den manuellen Signalaufwand mit einem Python-Skript, das DBC-Dateien in CODESYS importiert, um bis zu 90 % reduziert. Lagerprüfstände konstruiert, in CODESYS programmiert und die Prüfabläufe in LabVIEW automatisiert.">Built the PLC control for 48 V and 96 V drive test benches in ST and FBD to IEC 61131-3, and cut manual signal handling by up to 90% with a Python script that imports DBC files into CODESYS. Designed bearing test benches, programmed them in CODESYS and automated the test sequences in LabVIEW.</p>
-                    <div class="project-tags"><span>CODESYS</span><span>IEC 61131-3</span><span>LabVIEW</span><span>Python</span><span>DBC</span></div>
-                    
-                </div>
+          </li>
+          <li class="job">
+            <p class="job__date">10/2025 – 05/2026</p>
+            <div>
+              <h3 data-en="Master Thesis, grade 1.0" data-de="Masterarbeit, Note 1,0">Master Thesis, grade 1.0</h3>
+              <p class="job__org">PEM, RWTH Aachen University</p>
+              <p data-en="Evaluation and optimisation of line detection algorithms, with a transformer-based pipeline running in real time on a Jetson AGX Orin." data-de="Bewertung und Optimierung von Linienerkennungsalgorithmen mit einer transformerbasierten Pipeline in Echtzeit auf einem Jetson AGX Orin.">Evaluation and optimisation of line detection algorithms, with a transformer-based pipeline running in real time on a Jetson AGX Orin.</p>
+              <ul class="tags"><li>PyTorch</li><li>NanoSAM</li><li>TensorRT</li><li>CARLA</li></ul>
             </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title" data-en="Experience &amp; Education" data-de="Erfahrung &amp; Ausbildung">Experience &amp; Education</h2>
-            <div class="timeline">
-
-                <div class="timeline-item">
-                    <div class="timeline-date">01/2024 – 09/2026</div>
-                    <div class="timeline-content">
-                        <h3 data-en="Student Research Assistant, Autonomous Systems Software" data-de="Wissenschaftliche Hilfskraft, Software für autonome Systeme">Student Research Assistant, Autonomous Systems Software</h3>
-                        <h4>PEM, RWTH Aachen University</h4>
-                        <ul>
-                            <li data-en="Autonomous electric bus: recommissioning, ROS 2 integration, sensor fusion, YOLOv8 on Jetson, safety concept targeting SIL 2" data-de="Autonomer Elektrobus: Wiederinbetriebnahme, ROS-2-Integration, Sensorfusion, YOLOv8 auf Jetson, Sicherheitskonzept mit Ziel SIL 2">Autonomous electric bus: recommissioning, ROS 2 integration, sensor fusion, YOLOv8 on Jetson, safety concept targeting SIL 2</li>
-                            <li data-en="Docker CI/CD with about 200 automated tests, ISO 26262 unit tests, Ethernet HIL with Fast DDS" data-de="Docker-CI/CD mit rund 200 automatisierten Tests, ISO-26262-Unit-Tests, Ethernet-HIL mit Fast DDS">Docker CI/CD with about 200 automated tests, ISO 26262 unit tests, Ethernet HIL with Fast DDS</li>
-                            <li data-en="Fuel-cell hybrid truck: ECU commissioning, 70% less CAN integration effort, one-pedal drive with recuperation" data-de="Brennstoffzellen-Hybrid-Lkw: Steuergeräte-Inbetriebnahme, 70 % weniger CAN-Integrationsaufwand, One-Pedal-Drive mit Rekuperation">Fuel-cell hybrid truck: ECU commissioning, 70% less CAN integration effort, one-pedal drive with recuperation</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">10/2025 – 05/2026</div>
-                    <div class="timeline-content">
-                        <h3 data-en="Master Thesis (grade 1.0)" data-de="Masterarbeit (Note 1,0)">Master Thesis (grade 1.0)</h3>
-                        <h4>PEM, RWTH Aachen University</h4>
-                        <ul>
-                            <li data-en="Evaluation and optimisation of line detection algorithms; transformer-based pipeline in real time on Jetson AGX Orin" data-de="Bewertung und Optimierung von Linienerkennungsalgorithmen; transformerbasierte Pipeline in Echtzeit auf Jetson AGX Orin">Evaluation and optimisation of line detection algorithms; transformer-based pipeline in real time on Jetson AGX Orin</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">01/2023 – 09/2024</div>
-                    <div class="timeline-content">
-                        <h3 data-en="Embedded Software Developer, Team Lead Powertrain &amp; Control" data-de="Embedded-Softwareentwickler, Teamleiter Antrieb &amp; Regelung">Embedded Software Developer, Team Lead Powertrain &amp; Control</h3>
-                        <h4>Tachyon Hyperloop e.V. (student team)</h4>
-                        <ul>
-                            <li data-en="Led 8 students; brake ECU software in Simulink for TI C2000; HV inverter, 90 kW motor and 350 V battery integration" data-de="8 Studierende geleitet; Bremssteuergeräte-Software in Simulink für TI C2000; Integration von HV-Umrichter, 90-kW-Motor und 350-V-Batterie">Led 8 students; brake ECU software in Simulink for TI C2000; HV inverter, 90 kW motor and 350 V battery integration</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">08/2023 – 08/2024</div>
-                    <div class="timeline-content">
-                        <h3 data-en="Working Student, Test Bench Software" data-de="Werkstudent, Prüfstandssoftware">Working Student, Test Bench Software</h3>
-                        <h4>ENGIRO GmbH</h4>
-                        <ul>
-                            <li data-en="PLC control for drive test benches in CODESYS; DBC import script saving up to 90% of manual work" data-de="PLC-Steuerung für Antriebsprüfstände in CODESYS; DBC-Importskript spart bis zu 90 % Handarbeit">PLC control for drive test benches in CODESYS; DBC import script saving up to 90% of manual work</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">07/2022 – 07/2023</div>
-                    <div class="timeline-content">
-                        <h3 data-en="Working Student, Test Bench Automation" data-de="Werkstudent, Prüfstandsautomatisierung">Working Student, Test Bench Automation</h3>
-                        <h4>Elgeti Engineering GmbH</h4>
-                        <ul>
-                            <li data-en="Bearing test benches in CODESYS and LabVIEW; 15% better quality assurance; supervised two interns" data-de="Lagerprüfstände in CODESYS und LabVIEW; 15 % bessere Qualitätssicherung; zwei Praktikanten betreut">Bearing test benches in CODESYS and LabVIEW; 15% better quality assurance; supervised two interns</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">04/2022 – 05/2026</div>
-                    <div class="timeline-content">
-                        <h3 data-en="M.Sc. Automation Engineering" data-de="M.Sc. Automatisierungstechnik">M.Sc. Automation Engineering</h3>
-                        <h4>RWTH Aachen University</h4>
-                        <ul>
-                            <li data-en="Control engineering, reinforcement learning, electric drives and storage, software and electronics in mobile drives" data-de="Regelungstechnik, Reinforcement Learning, elektrische Antriebe und Speicher, Software und Elektronik mobiler Antriebe">Control engineering, reinforcement learning, electric drives and storage, software and electronics in mobile drives</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">2018 – 04/2022</div>
-                    <div class="timeline-content">
-                        <h3 data-en="B.Eng. Mechanical Engineering" data-de="B.Eng. Maschinenbau">B.Eng. Mechanical Engineering</h3>
-                        <h4>FH Aachen, Department of Energy Engineering</h4>
-                        <ul>
-                            <li data-en="Thermodynamics, fluid mechanics, electrical and energy engineering, measurement and control" data-de="Thermodynamik, Strömungslehre, Elektro- und Energietechnik, Mess- und Regelungstechnik">Thermodynamics, fluid mechanics, electrical and energy engineering, measurement and control</li>
-                        </ul>
-                    </div>
-                </div>
+          </li>
+          <li class="job">
+            <p class="job__date">01/2023 – 09/2024</p>
+            <div>
+              <h3 data-en="Embedded Software Developer, Team Lead Powertrain &amp; Control" data-de="Embedded-Softwareentwickler, Teamleiter Antrieb &amp; Regelung">Embedded Software Developer, Team Lead Powertrain &amp; Control</h3>
+              <p class="job__org">Tachyon Hyperloop e.V.</p>
+              <p data-en="Led eight students; brake ECU software for TI C2000; HV inverter, motor and battery integration." data-de="Acht Studierende geleitet; Bremssteuergeräte-Software für TI C2000; Integration von HV-Umrichter, Motor und Batterie.">Led eight students; brake ECU software for TI C2000; HV inverter, motor and battery integration.</p>
+              <ul class="tags"><li>Simulink</li><li>Embedded Coder</li><li>CAPL</li><li>CANape</li></ul>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title" data-en="Get In Touch" data-de="Kontakt aufnehmen">Get In Touch</h2>
-            <p class="contact-subtitle"
-               data-en="I'm always open to discussing new opportunities, collaborations, or interesting projects in autonomous vehicles and robotics."
-               data-de="Ich bin immer offen für neue Möglichkeiten, Zusammenarbeit oder interessante Projekte im Bereich autonome Fahrzeuge und Robotik.">
-               I'm always open to discussing new opportunities, collaborations, or interesting projects in autonomous vehicles and robotics.
-            </p>
-            <div class="contact-info">
-                <div class="contact-card">
-                    <i class="fas fa-envelope"></i>
-                    <h3 data-en="Email" data-de="E-Mail">Email</h3>
-                    <a href="mailto:abjha1998@gmail.com">abjha1998@gmail.com</a>
-                </div>
-                <div class="contact-card">
-                    <i class="fas fa-phone"></i>
-                    <h3 data-en="Phone" data-de="Telefon">Phone</h3>
-                    <a href="tel:+4915255867075">+49 1525 5867075</a>
-                </div>
-                <div class="contact-card">
-                    <i class="fab fa-linkedin"></i>
-                    <h3>LinkedIn</h3>
-                    <a href="https://www.linkedin.com/in/abhishek-j-3497a8121" target="_blank">abhishek-j-3497a8121</a>
-                </div>
-                <div class="contact-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3 data-en="Location" data-de="Standort">Location</h3>
-                    <p>Aachen, Deutschland</p>
-                </div>
+          </li>
+          <li class="job">
+            <p class="job__date">08/2023 – 08/2024</p>
+            <div>
+              <h3 data-en="Working Student, Test Bench Software" data-de="Werkstudent, Prüfstandssoftware">Working Student, Test Bench Software</h3>
+              <p class="job__org">ENGIRO GmbH</p>
+              <p data-en="PLC control for 48 V and 96 V drive test benches in CODESYS, DBC import automation in Python." data-de="PLC-Steuerung für 48-V- und 96-V-Antriebsprüfstände in CODESYS, DBC-Import-Automatisierung in Python.">PLC control for 48 V and 96 V drive test benches in CODESYS, DBC import automation in Python.</p>
+              <ul class="tags"><li>CODESYS</li><li>IEC 61131-3</li><li>Python</li></ul>
             </div>
-        </div>
-    </section>
+          </li>
+          <li class="job">
+            <p class="job__date">07/2022 – 07/2023</p>
+            <div>
+              <h3 data-en="Working Student, Test Bench Automation" data-de="Werkstudent, Prüfstandsautomatisierung">Working Student, Test Bench Automation</h3>
+              <p class="job__org">Elgeti Engineering GmbH</p>
+              <p data-en="Designed and automated bearing test benches, supervised two interns and supported customers after delivery." data-de="Lagerprüfstände konstruiert und automatisiert, zwei Praktikanten betreut und Kunden nach der Auslieferung unterstützt.">Designed and automated bearing test benches, supervised two interns and supported customers after delivery.</p>
+              <ul class="tags"><li>CODESYS</li><li>LabVIEW</li></ul>
+            </div>
+          </li>
+      </ol>
+      <div class="edu">
+        <h3 class="career__sub" data-en="Education" data-de="Ausbildung">Education</h3>
+        <ul>
+          <li><span>04/2022 – 05/2026</span> <span data-en="M.Sc. Automation Engineering, RWTH Aachen University, thesis 1.0" data-de="M.Sc. Automatisierungstechnik, RWTH Aachen University, Masterarbeit 1,0">M.Sc. Automation Engineering, RWTH Aachen University, thesis 1.0</span></li>
+          <li><span>2018 – 04/2022</span> <span data-en="B.Eng. Mechanical Engineering, FH Aachen, Department of Energy Engineering" data-de="B.Eng. Maschinenbau, FH Aachen, Fachbereich Energietechnik">B.Eng. Mechanical Engineering, FH Aachen, Department of Energy Engineering</span></li>
+        </ul>
+      </div>
+      <div class="tools">
+        <h3 class="career__sub" data-en="Toolchain" data-de="Werkzeuge">Toolchain</h3>
+        <dl><div><dt data-en="Autonomy" data-de="Autonomie">Autonomy</dt><dd>ROS 2, Fast DDS, sensor fusion, YOLOv8/YOLO26, transformers, TensorRT, CUDA, CARLA, MuJoCo, MPC</dd></div><div><dt data-en="Vehicle E/E" data-de="Fahrzeug-E/E">Vehicle E/E</dt><dd>CAN / J1939, DBC, XCP, CANape, CANoe, CAPL, oscilloscope, HV systems (level 3E)</dd></div><div><dt data-en="Embedded" data-de="Embedded">Embedded</dt><dd>C++, MATLAB/Simulink, Embedded Coder, TI C2000, STM32, ISO 26262 unit tests</dd></div><div><dt data-en="Automation and test" data-de="Automatisierung und Test">Automation and test</dt><dd>Docker CI/CD, GitHub Actions, HIL, CODESYS, TIA Portal (personal), LabVIEW, Linux, Python</dd></div><div><dt data-en="AI-assisted" data-de="KI-gestützt">AI-assisted</dt><dd>Claude Code, sub-agents, hooks, MCP servers</dd></div></dl>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Abhishek Jha. <span data-en="All rights reserved." data-de="Alle Rechte vorbehalten.">All rights reserved.</span></p>
-            <p><span data-en="Built with" data-de="Erstellt mit">Built with</span> ❤️ <span data-en="for autonomous vehicle development" data-de="für die Entwicklung autonomer Fahrzeuge">for autonomous vehicle development</span></p>
-        </div>
-    </footer>
-
-    <script src="js/script.js"></script>
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <h2 class="contact__title" id="contact-title" data-en="Let&#x27;s talk." data-de="Lassen Sie uns sprechen.">Let&#x27;s talk.</h2>
+    <p class="contact__mail"><a href="mailto:abjha1998@gmail.com">abjha1998@gmail.com</a></p>
+    <ul class="contact__links">
+      <li><a href="tel:+4915255867075">+49 1525 5867075</a></li>
+      <li><a href="https://www.linkedin.com/in/abhishek-j-3497a8121" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/Abhi-Jha345" target="_blank" rel="noopener">GitHub</a></li>
+      <li data-en="Aachen, Germany" data-de="Aachen, Deutschland">Aachen, Germany</li>
+    </ul>
+  </section>
+</main>
+<footer class="foot"><p>© 2026 Abhishek Jha</p></footer>
+<script src="js/site.js" defer></script>
 </body>
 </html>
