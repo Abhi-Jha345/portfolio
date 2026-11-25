@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Software architecture of the fixed-wing UAV autopilot">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#475569"/></marker>
+    <style>
+      .box{fill:#fff;stroke:#cbd5e1;stroke-width:1.5}
+      .core{fill:#eff6ff;stroke:#2563eb;stroke-width:1.8}
+      .grp{fill:#fff;stroke:#93c5fd;stroke-width:1.2}
+      .hal{fill:#f0fdf4;stroke:#16a34a;stroke-width:1.5}
+      .plat{fill:#fff7ed;stroke:#ea580c;stroke-width:1.5}
+      .ver{fill:#f8fafc;stroke:#64748b;stroke-width:1.5;stroke-dasharray:5 4}
+      .t{font-size:15px;font-weight:700;fill:#0f172a}
+      .s{font-size:12.5px;fill:#334155}
+      .m{font-size:12px;fill:#1e40af;font-weight:600}
+      .l{stroke:#475569;stroke-width:1.6;fill:none;marker-end:url(#a)}
+      .lab{font-size:11.5px;fill:#475569;font-style:italic}
+    </style>
+  </defs>
+
+  <!-- Simulink reference -->
+  <rect class="box" x="20" y="18" width="300" height="96" rx="10"/>
+  <text class="t" x="36" y="44">Simulink reference model</text>
+  <text class="s" x="36" y="66">6-DOF fixed-wing, 10 / 50 / 200 Hz loops</text>
+  <text class="s" x="36" y="85">H∞ attitude/rate + anti-windup, TECS</text>
+  <text class="s" x="36" y="104">Unreal 3D view, live cockpit dashboard</text>
+
+  <!-- Companion -->
+  <rect class="box" x="680" y="18" width="300" height="96" rx="10"/>
+  <text class="t" x="696" y="44">Companion computer (ROS 2)</text>
+  <text class="s" x="696" y="66">Gazebo fixed-wing, camera + IMU</text>
+  <text class="s" x="696" y="85">OpenVINS mono-inertial VIO</text>
+  <text class="s" x="696" y="104">EXT_NAV bridge + time sync</text>
+
+  <!-- Core -->
+  <rect class="core" x="20" y="140" width="960" height="250" rx="12"/>
+  <text class="t" x="36" y="166">core/  (platform-independent C++17, no OS headers, fixed 5 ms base frame)</text>
+
+  <rect class="grp" x="36" y="182" width="290" height="190" rx="8"/>
+  <text class="m" x="50" y="204">10 Hz group</text>
+  <text class="s" x="50" y="228">Link rx/tx, telemetry</text>
+  <text class="s" x="50" y="250">FailsafeMonitor</text>
+  <text class="s" x="50" y="272">(link loss, geofence, GNSS loss)</text>
+  <text class="s" x="50" y="294">ModeManager state machine</text>
+  <text class="s" x="50" y="316">MANUAL · STABILIZE · ALT_HOLD</text>
+  <text class="s" x="50" y="336">WAYPOINT · LOITER · RTL</text>
+  <text class="s" x="50" y="358">Navigator</text>
+
+  <rect class="grp" x="355" y="182" width="290" height="190" rx="8"/>
+  <text class="m" x="369" y="204">50 Hz group</text>
+  <text class="s" x="369" y="228">AttitudeController</text>
+  <text class="s" x="369" y="250">roll / pitch → rate commands</text>
+  <text class="s" x="369" y="282">EnergyController (TECS)</text>
+  <text class="s" x="369" y="304">altitude + airspeed →</text>
+  <text class="s" x="369" y="324">pitch command, throttle</text>
+  <text class="s" x="369" y="350">controller contract: saturation,</text>
+  <text class="s" x="369" y="368" dy="0">anti-windup, bumpless reset</text>
+
+  <rect class="grp" x="674" y="182" width="290" height="190" rx="8"/>
+  <text class="m" x="688" y="204">200 Hz group</text>
+  <text class="s" x="688" y="228">read sensors</text>
+  <text class="s" x="688" y="250">StateEstimator → VehicleState</text>
+  <text class="s" x="688" y="272">RateController (p, q, r)</text>
+  <text class="s" x="688" y="294">ActuatorLimiter</text>
+  <text class="s" x="688" y="316">write surfaces + throttle</text>
+  <text class="s" x="688" y="348">FrameMonitor: 4 ms budget</text>
+  <text class="s" x="688" y="366">ExtNav decoder (CRC) + time sync</text>
+
+  <path class="l" d="M326 277 H353"/>
+  <path class="l" d="M645 277 H672"/>
+
+  <!-- HAL -->
+  <rect class="hal" x="20" y="412" width="960" height="58" rx="10"/>
+  <text class="t" x="36" y="437">hal/  pure interfaces</text>
+  <text class="s" x="36" y="458">IClock · IImu · IAirData · IGnss · IActuators · ILink · IExtNav</text>
+
+  <!-- Platforms -->
+  <rect class="plat" x="20" y="492" width="470" height="58" rx="10"/>
+  <text class="t" x="36" y="517">platforms/sil_jsbsim</text>
+  <text class="s" x="36" y="538">software-in-the-loop over UDP against JSBSim</text>
+  <rect class="plat" x="510" y="492" width="470" height="58" rx="10"/>
+  <text class="t" x="526" y="517">platforms/stm32  (Cortex-M4F)</text>
+  <text class="s" x="526" y="538">core cross-compiles for the target, HIL planned</text>
+
+  <!-- Verification -->
+  <rect class="ver" x="20" y="570" width="960" height="56" rx="10"/>
+  <text class="t" x="36" y="594">Verification in CI</text>
+  <text class="s" x="36" y="614">GoogleTest unit tests · back-to-back vs Simulink traces · requirement trace matrix · core-isolation check · clang-tidy, cppcheck, sanitizers, coverage</text>
+
+  <!-- arrows -->
+  <path class="l" d="M170 114 V138"/>
+  <text class="lab" x="178" y="132">back-to-back traces</text>
+  <path class="l" d="M830 114 V138"/>
+  <text class="lab" x="838" y="132">EXT_NAV frames</text>
+  <path class="l" d="M500 390 V410"/>
+  <path class="l" d="M255 490 V472"/>
+  <path class="l" d="M745 490 V472"/>
+</svg>

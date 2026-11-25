@@ -869,3 +869,9 @@ section {
 .project-link:hover { text-decoration: underline; }
 .skill-category h3 i { color: var(--primary-color); margin-right: .3rem; }
 @media (max-width: 768px) { .project-media { margin: -1.5rem -1.5rem 1rem; } }
+
+.project-gallery { display: grid; grid-template-columns: 1fr; gap: 1px; background: var(--border-color); }
+.project-gallery figure { margin: 0; background: #fff; display: flex; flex-direction: column; }
+.project-gallery img { width: 100%; height: auto; display: block; flex: 1; object-fit: contain; }
+.project-gallery figcaption { font-size: .8rem; color: var(--text-light); padding: .4rem .8rem .6rem; }
+@media (max-width: 768px) { .project-gallery { grid-template-columns: 1fr; } }
