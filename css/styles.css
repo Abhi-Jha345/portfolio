@@ -875,3 +875,4 @@ section {
 .project-gallery img { width: 100%; height: auto; display: block; flex: 1; object-fit: contain; }
 .project-gallery figcaption { font-size: .8rem; color: var(--text-light); padding: .4rem .8rem .6rem; }
 @media (max-width: 768px) { .project-gallery { grid-template-columns: 1fr; } }
+.project-gallery img { max-height: 440px; }
