@@ -242,6 +242,9 @@ toolchain = [
 ]
 tools_html = "".join(f'<div><dt data-en="{E(a)}" data-de="{E(b)}">{E(a)}</dt><dd>{E(c)}</dd></div>' for a, b, c in toolchain)
 
+import hashlib
+V_CSS = hashlib.md5((ROOT/'css/site.css').read_bytes()).hexdigest()[:8]
+V_JS = hashlib.md5((ROOT/'js/site.js').read_bytes()).hexdigest()[:8]
 page = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -252,7 +255,7 @@ page = f'''<!DOCTYPE html>
 <meta name="theme-color" content="#101214">
 <link rel="preload" href="assets/fonts/big-shoulders-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/site.css?v={V_CSS}">
 </head>
 <body>
 <a class="skip" href="#work" data-en="Skip to work" data-de="Zu den Projekten">Skip to work</a>
@@ -337,7 +340,7 @@ page = f'''<!DOCTYPE html>
   </section>
 </main>
 <footer class="foot"><p>© 2026 Abhishek Jha</p></footer>
-<script src="js/site.js" defer></script>
+<script src="js/site.js?v={V_JS}" defer></script>
 </body>
 </html>
 '''
