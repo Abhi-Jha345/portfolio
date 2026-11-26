@@ -28,6 +28,7 @@
   const hero = document.querySelector('.hero__video');
   if (hero && reduce) { hero.removeAttribute('autoplay'); hero.pause(); }
 
+
   // project videos: play in view, toggle button
   const setState = (btn, playing) => {
     btn.dataset.state = playing ? 'playing' : 'paused';
