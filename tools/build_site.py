@@ -31,6 +31,19 @@ def image(src, alt, cls="media media--img"):
     return f'<figure class="{cls}"><a href="{src}" target="_blank" rel="noopener"><img src="{src}" alt="{E(alt)}" loading="lazy"></a></figure>'
 
 
+def gallery(items):
+    """Strip of portrait tiles: ('v'|'i', src, poster_or_alt, cap_en, cap_de)."""
+    tiles = ""
+    for kind, src, extra, cap_en, cap_de in items:
+        if kind == "v":
+            body = (f'<video muted loop playsinline preload="none" poster="{extra}" aria-label="{E(cap_en)}"><source src="{src}" type="video/mp4"></video>'
+                    f'<button class="vtoggle" type="button" aria-label="Play video" data-state="paused"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-play" d="M8 5v14l11-7z"/><path class="i-pause" d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>')
+        else:
+            body = f'<a href="{src}" target="_blank" rel="noopener"><img src="{src}" alt="{E(extra)}" loading="lazy"></a>'
+        tiles += f'<figure class="tile"><div class="tile__frame">{body}</div><figcaption data-en="{E(cap_en)}" data-de="{E(cap_de)}">{E(cap_en)}</figcaption></figure>'
+    return f'<div class="media media--gallery">{tiles}</div>'
+
+
 def panel(lines):
     """Typographic stand-in for projects without footage: a datasheet block."""
     rows = "".join(f'<div><span>{E(k)}</span><span>{E(v)}</span></div>' for k, v in lines)
@@ -166,7 +179,12 @@ work = "".join([
         ["Tachyon Hyperloop", "team lead · 8 students", "TI C2000", "90 kW axial-flux", "350 V pack"],
         "As team lead for powertrain and control I took the drive from scratch to its first demonstration in 1.5 years. We passed all rulebook tests at the European Hyperloop Week and received an award for a promising electrical subsystem.",
         "Als Teamleiter für Antrieb und Regelung habe ich den Antrieb in 1,5 Jahren von null bis zur ersten Demonstration gebracht. Wir haben alle Regelwerkstests der European Hyperloop Week bestanden und eine Auszeichnung für ein vielversprechendes elektrisches Subsystem erhalten.",
-        panel([("team", "8 students"), ("brake ECU", "Simulink · Embedded Coder · TI C2000"), ("motor", "90 kW axial flux · resolver"), ("battery", "350 V · cell monitoring"), ("tools", "XCP · CANape · CAPL"), ("event", "European Hyperloop Week")]),
+        gallery([
+            ("v", "assets/hyperloop/motor_bench.mp4", "assets/hyperloop/motor_bench.jpg", "Motor on the bench, HV inverter", "Motor am Prüfstand, HV-Umrichter"),
+            ("v", "assets/hyperloop/drivetrain_spin.mp4", "assets/hyperloop/drivetrain_spin.jpg", "Drivetrain spin test in the pod", "Drehtest des Antriebsstrangs im Pod"),
+            ("i", "assets/hyperloop/pod_integration.jpg", "Hyperloop pod during integration with orange HV cabling and pneumatics", "Pod during HV integration", "Pod bei der HV-Integration"),
+            ("i", "assets/hyperloop/pod_display.jpg", "Finished Hyperloop pod on display at an outdoor event", "Finished pod on display", "Fertiger Pod in der Ausstellung"),
+        ]),
         "I wrote the brake ECU software in Simulink with Embedded Coder including unit and module tests, commissioned the axial-flux motor on the HV inverter and tuned its speed control via XCP, and integrated a 350 V prototype battery pack with temperature and cell monitoring, emergency shutdown and balancing.",
         "Ich habe die Bremssteuergeräte-Software in Simulink mit Embedded Coder inklusive Unit- und Modultests entwickelt, den Axialflussmotor am HV-Umrichter in Betrieb genommen und seine Drehzahlregelung per XCP abgestimmt sowie ein 350-V-Prototyp-Batteriepaket mit Temperatur- und Zellüberwachung, Notabschaltung und Balancing integriert.",
         [("Period", "Zeitraum", "01/2023 – 09/2024", "01/2023 – 09/2024"),
